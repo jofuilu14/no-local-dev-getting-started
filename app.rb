@@ -5,7 +5,15 @@ require 'sinatra/activerecord'
 require './environments'
 
 
-
+class UsersController < ApplicationController
+  .
+  .
+  .
+  get  "/form" do
+    @lead = Lead.form
+    @titre = "Inscription"
+  end
+end
 
 class Lead < ActiveRecord::Base
   self.table_name = 'salesforce.lead'
