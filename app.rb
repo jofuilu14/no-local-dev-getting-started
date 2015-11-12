@@ -19,9 +19,6 @@ get "/home" do
   erb :home
 end
 
-set "/form" do
-  erb :form
-end
 
 
 class Contact < ActiveRecord::Base
