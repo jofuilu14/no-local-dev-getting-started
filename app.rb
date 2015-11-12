@@ -7,12 +7,12 @@ class Lead < ActiveRecord::Base
   self.table_name = 'salesforce.lead'
 end
 
-get "/leads" do
+get "/" do
   @leads = Lead.all
   erb :index
 end
 
-get "/" do
+get "/leads" do
   erb :home
 end
 
