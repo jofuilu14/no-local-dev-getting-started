@@ -5,6 +5,7 @@
       <th>First Name</th>
       <th>Last Name</th>
       <th>Email</th>
+      <th>Company/th>
     </tr>
 
     <% @leads.each do |lead| %>
@@ -12,6 +13,7 @@
         <td><%= lead.firstname %></td>
         <td><%= lead.lastname %></td>
         <td><%= lead.email %></td>
+        <td><%= lead.company %></td>
       </tr>
     <% end %>
   </table>
