@@ -7,41 +7,11 @@ include ActiveModel::Validations
 include ActiveModel::Conversion
 extend  ActiveModel::Naming
 
-class Contact < ActiveRecord::Base
- 
-  attr_accessor :firstname, :lastname, :email, :message
- 
-  validates :lastname, :firstname, :email, :message, presence: true
-  validates :email, :format => { :with => %r{.+@.+\..+} }, allow_blank: true
- 
-end
-def persisted?
-  false
-end
- 
-def initialize(attributes = {})
-  attributes.each do |name, value|
-    send("#{name}=", value)
-  end
-  
-  class ContactsController < ApplicationController
- 
-  def form
-    @contact = Contact.form
-  end
- 
-  def create
-    @contact = Contact.form params[:contact]
- 
-    if @contact.valid?
-     
-      redirect_to new_contact_path, flash: {success: t(:"create.message_has_been_sent")}
-    else
-      render :form
-    end
-  end
- 
-end
+class Post < ActiveRecord::Base
+  validates :name,  :presence => true
+  validates :title, :presence => true,
+                    :length ={minimum => 5 }
+ end
 class Lead < ActiveRecord::Base
   self.table_name = 'salesforce.lead'
 end
