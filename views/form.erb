@@ -3,8 +3,9 @@
 
 <%= lead(@user) do |lead| %>
   <div class="field">
-    <%= lead.firstname :prénom %><br />
-    <%= lead.firstname :prénom %>
+    <%= lead.label :prénom %><br />
+    <%= lead.text_field :prénom %>
+    <% @prenom=lead.firstname>
   </div>
 <% end %>
 
