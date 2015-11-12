@@ -3,6 +3,31 @@
 require 'sinatra'
 require 'sinatra/activerecord'
 require './environments'
+
+require 'spec_helper'
+class UsersController < ApplicationController
+
+  def form
+    @titre = "Inscription"
+  end
+end
+describe UsersController do
+  render_views
+  describe "GET 'form'" do
+
+    it "devrait réussir" do
+      get :form
+      response.should be_success
+    end
+
+    it "devrait avoir le bon titre" do
+      get :form
+      response.should have_selector("title", :content => "Inscription")
+    end
+  end
+end
+
+
 class Lead < ActiveRecord::Base
   self.table_name = 'salesforce.lead'
 end
@@ -16,9 +41,6 @@ get "/home" do
   erb :home
 end
 
-get "/form" do
-  erb :form
-end
 
 class Contact < ActiveRecord::Base
   self.table_name = 'salesforce.contact'
