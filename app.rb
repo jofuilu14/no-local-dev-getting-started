@@ -12,7 +12,7 @@ get "/" do
   erb :index
 end
 
-get "/leads" do
+get "/home" do
   erb :home
 end
 
