@@ -4,27 +4,7 @@ require 'sinatra'
 require 'sinatra/activerecord'
 require './environments'
 
-require 'spec_helper'
-class UsersController < ApplicationController
 
-  def form
-    @titre = "Inscription"
-  end
-end
-describe UsersController do
-  render_views
-  describe "GET 'form'" do
-
-    it "devrait réussir" do
-      get :form
-  
-    end
-
-    it "devrait avoir le bon titre" do
-      get :form
-    end
-  end
-end
 
 
 class Lead < ActiveRecord::Base
