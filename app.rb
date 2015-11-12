@@ -9,8 +9,8 @@ class UsersController < ApplicationController
   .
   .
   .
-  get  "/form" do
-    def new
+  get "/form" do
+    def form
     @user = User.form
     @titre = "Inscription"
   end
