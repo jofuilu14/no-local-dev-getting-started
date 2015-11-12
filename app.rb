@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   .
   .
   get  "/form" do
-    @lead = Lead.form
+    @user = User.form
     @titre = "Inscription"
   end
 end
