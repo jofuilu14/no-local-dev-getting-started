@@ -17,12 +17,11 @@ describe UsersController do
 
     it "devrait réussir" do
       get :form
-      response.should be_success
+  
     end
 
     it "devrait avoir le bon titre" do
       get :form
-      response.should have_selector("title", :content => "Inscription")
     end
   end
 end
