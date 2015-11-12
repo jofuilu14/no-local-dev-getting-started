@@ -3,7 +3,14 @@
 require 'sinatra'
 require 'sinatra/activerecord'
 require './environments'
+class Lead < ActiveRecord::Base
+  self.table_name = 'salesforce.lead'
+end
 
+get "/contacts" do
+  @leads = Lead.all
+  erb :index
+end
 
 get "/" do
   erb :home
