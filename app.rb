@@ -16,6 +16,9 @@ get "/home" do
   erb :home
 end
 
+get "/form" do
+  erb :form
+end
 
 class Contact < ActiveRecord::Base
   self.table_name = 'salesforce.contact'
