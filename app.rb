@@ -19,7 +19,7 @@ get "/home" do
   erb :home
 end
 
-get "/form" do
+set "/form" do
   erb :form
 end
 
