@@ -3,9 +3,7 @@
 require 'sinatra'
 require 'sinatra/activerecord'
 require './environments'
-include ActiveModel::Validations
-include ActiveModel::Conversion
-extend  ActiveModel::Naming
+
 
 
 class Lead < ActiveRecord::Base
