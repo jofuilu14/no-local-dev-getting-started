@@ -12,6 +12,10 @@ class Post < ActiveRecord::Base
   validates :title, :presence => true,
                     :length ={minimum => 5 }
  end
+ get "/form" do
+   @post = Post.new
+   erb : form
+ end
 class Lead < ActiveRecord::Base
   self.table_name = 'salesforce.lead'
 end
