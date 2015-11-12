@@ -7,15 +7,7 @@ include ActiveModel::Validations
 include ActiveModel::Conversion
 extend  ActiveModel::Naming
 
-class Post < ActiveRecord::Base
-  validates :name,  :presence => true
-  validates :title, :presence => true,
-                    :length ={minimum => 5 }
- end
- get "/form" do
-   @post = Post.new
-   erb : form
- end
+
 class Lead < ActiveRecord::Base
   self.table_name = 'salesforce.lead'
 end
