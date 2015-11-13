@@ -10,7 +10,7 @@ class Stream
   end
 end
 
-get('stream/') { Stream.new }
+get('/stream') { Stream.new }
 
 class Lead < ActiveRecord::Base
   self.table_name = 'salesforce.lead'
