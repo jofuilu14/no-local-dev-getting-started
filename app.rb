@@ -22,6 +22,11 @@ get "/" do
   erb :index
 end
 
+get "/form" do
+  Lead.new
+  erb :form
+end
+
 
 
 get "/home" do
