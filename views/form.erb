@@ -1,11 +1,6 @@
-
-<h1>Inscription</h1>
-
-<%= lead(@user) do |lead| %>
-  <div class="field">
-    <%= lead.label :prénom %><br />
-    <%= lead.text_field :prénom %>
-    <% @prenom=lead.firstname>
-  </div>
+<%= form_tag("/search", method: "get") do %>
+  <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
 <% end %>
 
