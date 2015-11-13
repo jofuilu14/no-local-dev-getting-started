@@ -17,11 +17,8 @@ get "/" do
 end
 
 get "/form" do
-    def new
-    @leads = Lead.new
     erb :form
   end
-end
 
 get "/home" do
   erb :home
