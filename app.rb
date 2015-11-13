@@ -16,7 +16,7 @@ get "/" do
   erb :index
 end
 
-get "/form" do
+post "/form" do
     def new
     @leads = Lead.new
     erb :form
