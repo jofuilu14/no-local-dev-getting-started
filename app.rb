@@ -15,10 +15,6 @@ get "/" do
   erb :index
 end
 
-get "/search" do
-  erb :form
-end
-
 get "/home" do
   erb :home
 end
