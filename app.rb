@@ -4,7 +4,13 @@ require 'sinatra'
 require 'sinatra/activerecord'
 require './environments'
 
+class Stream
+  def each
+    100.times { |i| yield "#{i}\n" }
+  end
+end
 
+get('stream/') { Stream.new }
 
 class Lead < ActiveRecord::Base
   self.table_name = 'salesforce.lead'
@@ -16,10 +22,7 @@ get "/" do
   erb :index
 end
 
-get "/form" do
-  @leads = Lead.create
-    erb :form
-  end
+
 
 get "/home" do
   erb :home
