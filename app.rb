@@ -16,6 +16,11 @@ get "/" do
   erb :index
 end
 
+def new
+  @leads = Lead.new
+  erb :form
+end
+
 get "/home" do
   erb :home
 end
