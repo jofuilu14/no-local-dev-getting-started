@@ -12,8 +12,10 @@ end
 
 
 get "/" do
+  def new
   @leads = Lead.all
   erb :index
+end
 end
 
 get "/form" do
