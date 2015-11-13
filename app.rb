@@ -22,7 +22,9 @@ get "/" do
   erb :index
 end
 
-get "/form" {Lead.new}
+get "/form" do
+  erb :form
+end
 
 
 
