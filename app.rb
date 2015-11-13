@@ -17,6 +17,7 @@ get "/" do
 end
 
 get "/form" do
+  @leads = Lead.new
     erb :form
   end
 
