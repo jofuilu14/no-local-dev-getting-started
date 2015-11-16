@@ -22,8 +22,8 @@ get "/" do
   erb :index
 end
 
-def new
-  @lead = Lead.new
+def form
+  @lead = Lead.form
 end
 def create
   lead = Lead.new(params[:lead])
