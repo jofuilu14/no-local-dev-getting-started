@@ -1,24 +1,24 @@
 <h1>Inscription</h1>
 
-<%= form_for(@lead) do |f| %>
+<%= form_for(@lead) do |lead| %>
   <div class="field">
-    <%= f.label :nom %><br />
-    <%= f.text_field :nom %>
+    <%lead.label :nom %><br />
+    <%= lead.text_field :nom %>
   </div>
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
+    <%= lead.label :email %><br />
+    <%= lead.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
+    <%= lead.label :password %><br />
+    <%= lead.password_field :password %>
   </div>
   <div class="field">
-    <%= f.label :password_confirmation, "Confirmation" %><br />
-    <%= f.password_field :password_confirmation %>
+    <%= lead.label :password_confirmation, "Confirmation" %><br />
+    <%= lead.password_field :password_confirmation %>
   </div>
   <div class="actions">
-    <%= f.submit "Inscription" %>
+    <%= lead.submit "Inscription" %>
   </div>
 <% end %>
 
