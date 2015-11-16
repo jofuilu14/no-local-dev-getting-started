@@ -1,25 +1,4 @@
 <h1>Inscription</h1>
 
-<%= form_for(@lead) do |lead| %>
-  <div class="field">
-    <%lead.label :nom %><br />
-    <%= lead.text_field :nom %>
-  </div>
-  <div class="field">
-    <%= lead.label :email %><br />
-    <%= lead.text_field :email %>
-  </div>
-  <div class="field">
-    <%= lead.label :password %><br />
-    <%= lead.password_field :password %>
-  </div>
-  <div class="field">
-    <%= lead.label :password_confirmation, "Confirmation" %><br />
-    <%= lead.password_field :password_confirmation %>
-  </div>
-  <div class="actions">
-    <%= lead.submit "Inscription" %>
-  </div>
-<% end %>
 
 
