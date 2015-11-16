@@ -17,6 +17,7 @@ class Lead < ActiveRecord::Base
 end
 
 
+
 get "/" do
   @leads = Lead.all
   erb :index
