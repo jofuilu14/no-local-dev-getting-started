@@ -23,11 +23,11 @@ get "/" do
   erb :index
 end
 
+
 get "/form" do
   @leads = Lead.form
   erb :form
 end
-
 
 get "/home" do
   erb :home
