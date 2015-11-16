@@ -26,7 +26,7 @@ def form
   @lead = Lead.form
 end
 def create
-  lead = Lead.new(params[:lead])
+  lead = Lead.form(params[:lead])
   lead.IsRecurrence = false
   lead.IsReminderSet = false
   lead.Priority = "Normal"
