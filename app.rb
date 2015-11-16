@@ -23,9 +23,7 @@ get "/" do
   erb :index
 end
 
-
-get "/form" do
-  @leads = Lead.form
+get "form" do
   erb :form
 end
 
