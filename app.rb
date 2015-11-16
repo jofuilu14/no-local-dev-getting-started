@@ -22,21 +22,6 @@ get "/" do
   erb :index
 end
 
-def form
-  @lead = Lead.form
-end
-def create
-  lead = Lead.form(params[:lead])
-  lead.IsRecurrence = false
-  lead.IsReminderSet = false
-  lead.Priority = "Normal"
-  user = User.first
-  lead.OwnerId = user.Id
-  if (lead.save)
-    redirect_to(lead, :notice => 'Lead was successfully created.')
-  end
-end
-
 
 
 get "/home" do
